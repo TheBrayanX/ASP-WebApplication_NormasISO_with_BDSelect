@@ -1,0 +1,151 @@
+﻿@using System.Data
+@model DataTable
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Norma</title>
+    <link rel="icon" href="https://www.kawak.net/wp-content/uploads/2018/11/ISO.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #008BFF;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #0060FE;
+                }
+
+        .active {
+            background-color: #0060FE;
+        }
+
+        .title {
+            text-align: center;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .content {
+            padding: 50px;
+            text-align: justify;
+        }
+
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: auto;
+            width: 500px;
+        }
+
+        td {
+            border-collapse: collapse;
+        }
+
+        .negrilla {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <navbar>
+        <ul>
+            <li>@Html.ActionLink("ISO 25010", "Index", "Home")</li>
+            <li> @Html.ActionLink("ISO 14764", "Listado", "Cliente")</li>
+            <li class="active">@Html.ActionLink("ISO 12207", "Alta", "Cliente")</li>
+        </ul>
+    </navbar>
+    <h1 class="title">NORMA ISO/IEC 12207</h1>
+    <div class="content">
+        <p>
+            Proporciona una lista de tareas de mantenimiento para un producto a ser modificado teniendo encuenta que ya existe en el mercado:
+        </p>
+    </div>
+    <table>
+        <tr>
+            <td class="negrilla">id</td>
+            <td class="negrilla">Resolucion de Problemas</td>
+            <td class="negrilla">Gestion de Configuración</td>
+        </tr>
+        @foreach (DataRow r in Model.Rows)
+        {
+            <tr>
+                <td>@Convert.ToString(r["id01"])</td>
+                <td>@Convert.ToString(r["reso_Problemas"])</td>
+                <td>@Convert.ToString(r["ges_Config"])</td>
+            </tr>
+        }
+    </table>
+    <br />
+    <br />
+    <table>
+        <tr>
+            <td class="negrilla">id</td>
+            <td class="negrilla">Correccion</td>
+            <td class="negrilla">Mejora</td>
+        </tr>
+        @foreach (DataRow r in Model.Rows)
+        {
+            <tr>
+                <td>@Convert.ToString(r["id02"])</td>
+                <td>@Convert.ToString(r["Correccion"])</td>
+                <td>@Convert.ToString(r["Mejora"])</td>
+            </tr>
+        }
+    </table>
+    <br />
+    <br />
+    <table>
+        <tr>
+            <td class="negrilla">id</td>
+            <td class="negrilla">Estrategia</td>
+        </tr>
+        @foreach (DataRow r in Model.Rows)
+        {
+            <tr>
+                <td>@Convert.ToString(r["id03"])</td>
+                <td>@Convert.ToString(r["Estrategia"])</td>
+            </tr>
+        }
+    </table>
+    <br />
+    </a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

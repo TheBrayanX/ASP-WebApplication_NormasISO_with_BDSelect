@@ -1,0 +1,148 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Norma ISO</title>
+    <link rel="icon" href="https://www.kawak.net/wp-content/uploads/2018/11/ISO.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        html,body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #008BFF;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #0060FE;
+                }
+
+        .active {
+            background-color: #0060FE;
+        }
+
+        .title {
+            text-align: center;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .content {
+            padding: 50px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <navbar>
+        <ul>
+            <li class="active">@Html.ActionLink("ISO 25010", "Index", "Home")</li>
+            <li>@Html.ActionLink("ISO 14764", "Listado", "Cliente")</li>
+            <li>@Html.ActionLink("ISO 12207", "Alta", "Cliente")</li>
+        </ul>
+    </navbar>
+    <br />
+    <h1 class="title">NORMA ISO/IEC 25010</h1>
+    <div class="content">
+        <p>
+            Esta norma contiene 8 procesos; dónde se rige la calidad de un producto de Software y depende mucho de la satisficación de un usuario
+            al usar este producto, entonces aquel producto debe ser confiable, funcional, seguro y mantenible para el usuario.
+        </p>
+        <p>Los procesos son los siguientes: </p>
+        <br />
+        <strong class="title">Adecuación Funcional: </strong>
+        <br />
+        <li>
+            Esta caracteristica se basa cuando el producto es satisfactorio, cumplen tareas y objetivos del usuario. También proveen resultados con el nivel preciso requerido y proporcionando un conjunto de funciones para el usuario.
+        </li>
+        <br />
+        <strong class="title">Eficiencia de Desempeño: </strong>
+        <br />
+        <li>
+            Representa los recursos del producto: La primera maneja unos tiempos de respuesta y procesamiento en el manejo de recursos, utiliza tipo de recursos y cantidades dependido de lo establecido en el producto, y se ponen limites máximos
+            para los recursos.
+        </li>
+        <br />
+        <strong class="title">Compatibilidad: </strong>
+        <br />
+        <li>
+            Cuando el producto tiene la capacidad de subdividir uno o más componentes y procesar la información, comparte el mismo sistema Hardware y Software;
+            Que existe dentro de un entorno común compartiendo recursos y la capacidad de intercambiar información.
+        </li>
+        <br />
+        <strong class="title">Usabilidad: </strong>
+        <br />
+        <li>
+            Cuando el producto es entendido y aprendido por el usuario; Tiene la capacidad de entender el software, aprende sobre el software, opera y controla con facilidad,
+            Es capaz de proteger los errores que provocan el usuario, es atractivo ya que tiene una interfaz gráfica e interactiva, permite que sea utilizado por diversos usuarios.
+        </li>
+        <br />
+        <strong class="title">Fiabilidad: </strong>
+        <br />
+        <li>
+            Cuando el producto se usa bajo condiciones y periodo de tiempo determinado; la capacidad del sistema de manejar cualquier situación normal, siempre esta operativo y disponible el producto,
+            Opera en presencia a que no falle el producto, tiene la capacidad de hacer una copia de backup en caso de problemas en el producto.
+        </li>
+        <br />
+        <strong class="title">Seguridad: </strong>
+        <br />
+        <li>
+            La capacidad de la protección a la integridad de datos del producto; un protocolo establecido de personal autorizado en el producto,
+            prevenir que sean robados los datos de los usuarios, demostrar acciones y eventos que no sean rechazadas para el producto, el rastreo hacia una forma inequivocada a la entidad del producto,
+            reconocer la identidad del sujeto o un recurso del producto.
+        </li>
+        <br />
+        <strong class="title">Mantenibilidad: </strong>
+        <br />
+        <li>
+            Cuando el producto tiene una etapa de corrección y evolución, acepta modificaciones el producto de forma efectiva y eficiente; que los componentes del producto tengan impacto con los demás,
+            Que sea utilizado en una construcción de software o más activos del producto, atento a diagnosticar fallos y errores del producto, ser modificado de forma efectiva y eficiente,
+            Facilitando la capacidad de hacer periodos de prueba del componente y que cumplan criterios del producto.
+        </li>
+        <br />
+        <strong class="title">Portabilidad: </strong>
+        <br />
+        <li>
+            Que el producto pueda ser transferido de una forma efectiva y eficiente, la capacidad del producto al ser adaptado, facilidad en el manejo de instalación
+            y/o desinstalación efectiva, que pueda ser utilizada en otro entorno con el mismo propósito.
+        </li>
+        <br />
+        <br />
+    </div>
+        </a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+            </li>
+        </ul>
+      </div>
+</body>
+</html>
